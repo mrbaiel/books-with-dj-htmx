@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Книги{% endblock title %}</title>
+</head>
+
+<body>
+
+<div>
+    <div>
+        <div>
+            <!-- Таблица книг -->
+
+            <table>
+                <thead>
+                <tr>
+                    <!-- Заголовки столбцов таблицы -->
+
+                    <!-- Заголовок номера книги -->
+                    <th scope="col" style="width: 10%">
+                        <small>
+                            Номер
+                        </small>
+                    </th>
+
+                    <!-- Заголовок названия книги -->
+                    <th scope="col" style="width: 26%">
+                        <small>
+                            Название
+                        </small>
+                    </th>
+
+                    <!-- Заголовок автора книги -->
+                    <th scope="col" style="width: 26%">
+                        <small>
+                            Автор
+                        </small>
+                    </th>
+
+                    <!-- Заголовок цены книги -->
+                    <th scope="col" style="width: 11%">
+                        <small>
+                            Цена (руб)
+                        </small>
+                    </th>
+
+                    <!-- Заголовок статуса книги -->
+                    <th scope="col" style="width: 11%">
+                        <small>
+                            Статус
+                        </small>
+                    </th>
+
+                    <!-- Заголовок кнопок действия -->
+                    <th scope="col" style="width: 16%">
+                        <small>
+                            Действие
+                        </small>
+                    </th>
+
+                </tr>
+                </thead>
+
+                <!-- Список книг -->
+                <tbody id="book-list">
+                {% include "partial_book_list.html" %}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
