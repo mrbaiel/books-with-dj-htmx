@@ -12,3 +12,9 @@ class BookCreateForm(ModelForm):
     class Meta:
         model = Books
         fields = ['title', 'author', 'price']
+
+
+class BookEditForm(BookCreateForm):
+    class Meta:
+        model = Books
+        fields = ['title', 'author', 'price']

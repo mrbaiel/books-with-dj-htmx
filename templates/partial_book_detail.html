@@ -1,0 +1,45 @@
+<tr>
+    <!-- Ячейка номера книги -->
+    <td>
+        {{ book.id }}
+    </td>
+
+    <!-- Ячейка названия книги -->
+    <td>
+        {{ book.title }}
+    </td>
+
+    <!-- Ячейка автора книги -->
+    <td>
+        {{ book.author }}
+    </td>
+
+    <!-- Ячейка цены книги -->
+    <td>
+        {{ book.price }}
+    </td>
+
+    <!-- Ячейка состояния -->
+    <td>
+        <!-- Кнопка "Read/Unread" -->
+        <button class="disbtn">
+            {% if book.read %}Прочитано{% else %}Не прочитано{% endif %}
+        </button>
+    </td>
+
+    <!--  Ячейка кнопок действия -->
+    <td>
+        <!-- Кнопка "Edit" -->
+        <button class="disbtn"
+                hx-get="{% url 'update_book_details' book.id %}"
+                hx-target="closest tr"
+                hx-swap="outerHTML">
+            Изменить
+        </button>
+
+        <!-- Кнопка "Delete" -->
+        <button class="disbtn">
+            Удалить
+        </button>
+    </td>
+</tr>
